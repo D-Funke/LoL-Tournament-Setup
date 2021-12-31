@@ -1,7 +1,7 @@
 # Tournament Sorting
 
 ## Requirements
-* Python 3.9 or Later - Download [Link Included Here](https://www.python.org/downloads/)
+* Python 3.9 or Later - [Download Link Included Here](https://www.python.org/downloads/)
 * OpenPyXL - Version 3.0.9 or Later
 
 The installation of python is a must in order to run the program. Once you have downloaded Python 3.9 or later, make sure to install OpenPyXL by using Python's built-in package manager pip.
