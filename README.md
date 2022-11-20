@@ -21,7 +21,7 @@ Note: If running into installation issues with pip, try using "sudo pip install 
 ## Usage
 1. Make sure that Python is working on your system, and that you have OpenPyXL installed.
 
-2. Download and ensure that your Excel Document follows the format as specified from the linked Google Form [here](https://docs.google.com/spreadsheets/d/1V05duSZIejneRH1_fR5QOCfuq4kAmvindJnvbsE6TWY/edit?resourcekey#gid=1356638945). Any variation in the spreadsheet formatting may result in incorrect data being produced upon sorting.
+2. Download and ensure that your Excel Document follows the format as specified from the linked Google Form [here](https://docs.google.com/forms/d/1vHAIhEMqnBzDSvZyMaVmlPIyIyvCJwckU1Tpgz2PYmE/edit). Any variation in the spreadsheet formatting may result in incorrect data being produced upon sorting.
 
 3. Place the Excel Document with your responses into the /InputForms folder. This is where the program will check for any valid documents for sorting.
 
