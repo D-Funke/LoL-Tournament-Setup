@@ -10,6 +10,36 @@ import os
 # * Perhaps Make or other command functionality for program to assist in easier processing
 # * Singlular Generation of Excel Document by File Specification rather than pulling all
 
+CONST_RANK_NUM = {
+    'Iron IV': 1,
+    'Iron III': 2,
+    'Iron II': 3,
+    'Iron I': 4,
+    'Bronze IV': 5,
+    'Bronze III': 6,
+    'Bronze II': 7,
+    'Bronze I': 8,
+    'Silver IV': 9,
+    'Silver III': 10,
+    'Silver II': 11,
+    'Silver I': 12,
+    'Gold IV': 13,
+    'Gold III': 14,
+    'Gold II': 15,
+    'Gold I': 16,
+    'Platinum IV': 17,
+    'Platinum III': 18,
+    'Platinum II': 19,
+    'Platinum I': 20,
+    'Diamond IV': 21,
+    'Diamond III': 22,
+    'Diamond II': 23,
+    'Diamond I': 24,
+    'Master': 25,
+    'Grandmaster': 26,
+    'Challenger': 27
+}
+
 def GetFileList():
     # Desc: Gets all .xlsx files within the InputForms folder. Returns those files and corresponding data.
 
@@ -67,31 +97,7 @@ def CreateTeamWorksheet(userData, workbook):
     for user in userData:
         if user[4] != 'No':
             userNum = 0
-            if user[2] == 'Iron IV': userNum = 1
-            elif user[2] == 'Iron III': userNum = 2
-            elif user[2] == 'Iron II': userNum = 3
-            elif user[2] == 'Iron I': userNum = 4
-            elif user[2] == 'Silver IV': userNum = 5
-            elif user[2] == 'Silver III': userNum = 6
-            elif user[2] == 'Silver II': userNum = 7
-            elif user[2] == 'Silver I': userNum = 8
-            elif user[2] == 'Gold IV': userNum = 9
-            elif user[2] == 'Gold III': userNum = 10
-            elif user[2] == 'Gold II': userNum = 11
-            elif user[2] == 'Gold I': userNum = 12
-            elif user[2] == 'Platinum IV': userNum = 13
-            elif user[2] == 'Platinum III': userNum = 14
-            elif user[2] == 'Platinum II': userNum = 15
-            elif user[2] == 'Platinum I': userNum = 16
-            elif user[2] == 'Diamond IV': userNum = 17
-            elif user[2] == 'Diamond III': userNum = 18
-            elif user[2] == 'Diamond II': userNum = 19
-            elif user[2] == 'Diamond I': userNum = 20
-            elif user[2] == 'Master': userNum = 21
-            elif user[2] == 'Grandmaster': userNum = 22
-            elif user[2] == 'Challenger': userNum = 23
-            else:
-                pass
+            userNum = CONST_RANK_NUM[user[2]]
             if userNum != 0:
                 if len(captainUserData) == 0:
                     captainUserData.append([userNum, user[2], user[0], user[1], user[4]])
@@ -202,31 +208,7 @@ def CreatePrimaryRoleWorksheet(userData, workbook):
     # Sort Valid Players into their respective ranks
     for user in userData:
         userNum = 0
-        if user[2] == 'Iron IV': userNum = 1
-        elif user[2] == 'Iron III': userNum = 2
-        elif user[2] == 'Iron II': userNum = 3
-        elif user[2] == 'Iron I': userNum = 4
-        elif user[2] == 'Silver IV': userNum = 5
-        elif user[2] == 'Silver III': userNum = 6
-        elif user[2] == 'Silver II': userNum = 7
-        elif user[2] == 'Silver I': userNum = 8
-        elif user[2] == 'Gold IV': userNum = 9
-        elif user[2] == 'Gold III': userNum = 10
-        elif user[2] == 'Gold II': userNum = 11
-        elif user[2] == 'Gold I': userNum = 12
-        elif user[2] == 'Platinum IV': userNum = 13
-        elif user[2] == 'Platinum III': userNum = 14
-        elif user[2] == 'Platinum II': userNum = 15
-        elif user[2] == 'Platinum I': userNum = 16
-        elif user[2] == 'Diamond IV': userNum = 17
-        elif user[2] == 'Diamond III': userNum = 18
-        elif user[2] == 'Diamond II': userNum = 19
-        elif user[2] == 'Diamond I': userNum = 20
-        elif user[2] == 'Master': userNum = 21
-        elif user[2] == 'Grandmaster': userNum = 22
-        elif user[2] == 'Challenger': userNum = 23
-        else:
-            pass
+        userNum = CONST_RANK_NUM[user[2]]
         if userNum != 0:
             if user[5] == 'Top Lane': 
                 if len(topPlayers) == 0:
@@ -494,31 +476,7 @@ def CreateSecondaryRoleWorksheet(userData, workbook):
     # Sort Valid Players into their respective ranks
     for user in userData:
         userNum = 0
-        if user[2] == 'Iron IV': userNum = 1
-        elif user[2] == 'Iron III': userNum = 2
-        elif user[2] == 'Iron II': userNum = 3
-        elif user[2] == 'Iron I': userNum = 4
-        elif user[2] == 'Silver IV': userNum = 5
-        elif user[2] == 'Silver III': userNum = 6
-        elif user[2] == 'Silver II': userNum = 7
-        elif user[2] == 'Silver I': userNum = 8
-        elif user[2] == 'Gold IV': userNum = 9
-        elif user[2] == 'Gold III': userNum = 10
-        elif user[2] == 'Gold II': userNum = 11
-        elif user[2] == 'Gold I': userNum = 12
-        elif user[2] == 'Platinum IV': userNum = 13
-        elif user[2] == 'Platinum III': userNum = 14
-        elif user[2] == 'Platinum II': userNum = 15
-        elif user[2] == 'Platinum I': userNum = 16
-        elif user[2] == 'Diamond IV': userNum = 17
-        elif user[2] == 'Diamond III': userNum = 18
-        elif user[2] == 'Diamond II': userNum = 19
-        elif user[2] == 'Diamond I': userNum = 20
-        elif user[2] == 'Master': userNum = 21
-        elif user[2] == 'Grandmaster': userNum = 22
-        elif user[2] == 'Challenger': userNum = 23
-        else:
-            pass
+        userNum = CONST_RANK_NUM[user[2]]
         if userNum != 0:
             if user[6] == 'Top Lane': 
                 if len(topPlayers) == 0:
@@ -779,31 +737,7 @@ def CreatePlayerDatabaseWorksheet(userData, workbook):
 
     for user in userData:
         userNum = 0
-        if user[2] == 'Iron IV': userNum = 1
-        elif user[2] == 'Iron III': userNum = 2
-        elif user[2] == 'Iron II': userNum = 3
-        elif user[2] == 'Iron I': userNum = 4
-        elif user[2] == 'Silver IV': userNum = 5
-        elif user[2] == 'Silver III': userNum = 6
-        elif user[2] == 'Silver II': userNum = 7
-        elif user[2] == 'Silver I': userNum = 8
-        elif user[2] == 'Gold IV': userNum = 9
-        elif user[2] == 'Gold III': userNum = 10
-        elif user[2] == 'Gold II': userNum = 11
-        elif user[2] == 'Gold I': userNum = 12
-        elif user[2] == 'Platinum IV': userNum = 13
-        elif user[2] == 'Platinum III': userNum = 14
-        elif user[2] == 'Platinum II': userNum = 15
-        elif user[2] == 'Platinum I': userNum = 16
-        elif user[2] == 'Diamond IV': userNum = 17
-        elif user[2] == 'Diamond III': userNum = 18
-        elif user[2] == 'Diamond II': userNum = 19
-        elif user[2] == 'Diamond I': userNum = 20
-        elif user[2] == 'Master': userNum = 21
-        elif user[2] == 'Grandmaster': userNum = 22
-        elif user[2] == 'Challenger': userNum = 23
-        else:
-            pass
+        userNum = CONST_RANK_NUM[user[2]]
         if userNum != 0:
             if len(sortedUsers) == 0:
                 sortedUsers.append([userNum, user[0], user[1], user[2], user[3]]) # Discord Name, In-Game Name, Rank, LP
